@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import data  from '../components/data'
-import './projects.css'
+
 import { FaSearch, FaTimes,FaEllipsisV,FaHeart } from 'react-icons/fa'
 import Fade from 'react-reveal/Fade';
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 
 const Projects = () => {
     const [isActive, setIsActive] = useState(false);
 
-    const [projects, setProjects] = useState(data);
+    //const [projects, setProjects] = useState(data);
+
+    //redux all posts
+    const projects = useSelector(state => state.posts);
+    //redux filter posts
+
 
     const toggleClass = () => {
         setIsActive(!isActive);
@@ -18,6 +25,12 @@ const Projects = () => {
         <>
             <section className="projects">
                 <div className="projects-content">
+                    {/* {posts.map((post, ind) => {
+                        const {heading} = post;
+                        return (
+                            <h3 key={ind}>{heading}</h3>
+                        )
+                    })} */}
                         <h1 className="main-heading">My Articles</h1>
                     <div className="projects-header">
                         <p>Articles</p>
@@ -34,10 +47,10 @@ const Projects = () => {
                             </Fade>
                         </form>
                     </div>
-                    {projects.map((project, index) => {
-                        const {id,img,heading,semiHeading} = project;
+                    {projects.map((post, index) => {
+                        const {id,img,heading,semiHeading} = post;
                         return (
-                            <article className="project" key={id}>
+                            <Link to={`/posts/${post.id}`} className="project" key={id}>
                                 <Fade left>
                                     <img src={img} alt="" />
                                 </Fade>
@@ -59,7 +72,7 @@ const Projects = () => {
                                         </div>
                                     </div>
                                 </Fade>
-                            </article>
+                            </Link>
                         )
                     })}
                 </div>

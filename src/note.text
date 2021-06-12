@@ -21,21 +21,14 @@ import {Motion, spring} from 'react-motion';
 
 
 
+// const mapStateToProps = (state) => {
+//     return {
+//         posts: state.posts
+//     }
+// }
 
+//export default connect(mapStateToProps)(Projects)
 
-window.onscroll = function () {
-  myScroll();
-  dropRemove();
-};
-
-const navbar = document.querySelector("header");
-const sticky = navbar.offsetTop;
-const nav = navbar.offsetHeight;
-
-function myScroll() {
-  if (window.pageYOffset > nav) {
-    navbar.classList.add("sticky");
-  } else if (window.pageYOffset > sticky) {
-    navbar.classList.remove("sticky");
-  }
-}
+    
+    const pot = useSelector(state => state.posts);
+    console.log(pot);

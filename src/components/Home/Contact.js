@@ -20,7 +20,7 @@ const Contact = () => {
                     <Fade right>
                         <div className="para">
                             <p>abdulalimrakib53@gmail.com</p>
-                            <p>Tel: +8801537-420-501</p>
+                            <p>Tel: +8801537-501-420</p>
                         </div>
                     </Fade>
                     {/* <div className="para">

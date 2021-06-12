@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+
+$brown-light: #957c43;
+$green-light: #21bf21;
+$blue-light: #7fcbdd;
+$blue-med: #00a3f6;
+$yellow-light: #f8f8a9;
+$back-pri: rgba(255, 255, 255, 1);
+$back-sec: rgb(255, 224, 240);
+$fontColor: #222;
+$lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+$darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+$medium: 900px;
+$semiMedium: 700px;
+$small: 550px;
+$extraSmall: 450px;
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  .section{
+    padding: 0 100px;
+  }
+
+.header-sec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $back-sec;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color: $back-sec;
+}
+
+.text-content{
+    position: absolute;
+    top: 16%;
+    left: 40%;
+    @media screen and (max-width: $semiMedium) {
+        top: 24%;
+      }
+      @media screen and (max-width: $small) {
+        top: 28%;
+      }
+
+      @media screen and (max-width: $extraSmall) {
+        top: 32%;
+      }
+}
+
+.text-content h1{
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    @media screen and (max-width: $semiMedium) {
+        font-size: 25px;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 20px;
+      }
+}
+
+.text-content h3{
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    @media screen and (max-width: $semiMedium) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 15px;
+      }
+}

@@ -59,7 +59,7 @@ const Home = () => {
             <Element name="education">
                 <Education/>
             </Element>
-            <Link to="/projects" className="projects-btn">View My Projects</Link>
+            <Link to="/projects" className="projects-btn">View My Blogs</Link>
             <div name="contact">
                 <Contact/>
             </div>
